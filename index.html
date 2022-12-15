@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        font-family: 'Poppins', sans-serif;
+            padding:0;
+            margin:0;
+           
+            
+        }
+        nav{
+            background-color: white;
+            height:70px;
+            /* border: 1px solid black; */
+            display:flex;
+           justify-content: space-between;
+           /* position: -webkit-sticky; */
+           position: sticky;
+           top: 0;
+           margin-bottom:-50px;
+}
+        
+        #Sec-left{
+            padding:20px;
+            width:40%;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content:space-evenly;
+               
+        }
+        #Sec-left >img{
+            object-fit: cover;
+           width:170px;
+           height:40px;
+          margin-top: -10px;
+        }
+        #Sec-left >button{
+            /* width:15%; */
+             background-color:white;
+            border: none;
+            border-radius: 10px;
+            color: rgb(93 93 93);
+            font-size: 15px;
+            height:30px;
+           
+        }
+           
+           
+            
+        
+        #Sec-left >button:hover,#Sright >button:hover{
+            background-color:#f0f3ff;
+            cursor:pointer;
+            color:blue
+        }
+        #Sec-right >button:hover,#Sright >button:hover{
+            background-color:#f0f3ff;
+            cursor:pointer;
+            color:blue
+        }
+        #Sec-right{
+            padding:20px;
+            width:30%;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content:space-evenly;
+               
+        }
+        #Sec-right >button{
+            /* margin-top: 10px; */
+            background-color:white;
+            border: none;
+            border-radius: 10px;
+            color: rgb(93 93 93);
+            font-size: 15px;
+        }
+        #start>button{
+          
+            background-color:rgb(97 97 255);
+           font-size: 18px;
+           border-radius: 40px;
+           border: none;
+           height:40px;
+           width:140px;
+           color:white;
+        }
+       
+        #start:hover{
+            cursor:pointer;
+           
+        }
+        #section1{
+            background-color: #0d0e45;
+        }
+        #heading{
+           padding-top: 80px;
+            width:50%;
+            margin-left:30%;
+            
+        }
+        #heading > h1{
+            font-weight: 300;
+            font-size: 70px;
+            color: white;
+        }
+        #heading>h2{
+            margin-top:-40px;
+            color:white;
+            font-size: 23px;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+        
+        
+        #box{
+            /* border:5px solid green; */
+            display:grid;
+            grid-template-columns: repeat(9,1fr);
+            gap:10px;
+            width:80%;
+            margin: auto;
+           
+        }
+       
+        
+        #box>div{
+          
+            border:2px solid rgb(80 81 119);
+            color: rgb(203 203 215);            
+            text-align: center;
+            height:130px;;
+            border-radius: 10px;
+        }
+        #box>:nth-child(1):hover{
+            border:2px solid #ff158a;     
+        }
+        #box>:nth-child(2):hover{
+            border:2px solid #00c875;   
+        }
+        #box>:nth-child(3):hover{
+            border:2px solid #f04095;   
+        }
+        #box>:nth-child(4):hover{
+            border:2px solid #ff9900 ;   
+        }
+        #box>:nth-child(5):hover{
+            border:2px solid #00d2d2;   
+        }
+        #box>:nth-child(6):hover{
+            border:2px solid  #579bfc;   
+        }
+        #box>:nth-child(7):hover{
+            border:2px solid #ff7575;   
+        }
+        #box>:nth-child(8):hover{
+            border:2px solid #4eccc6;   
+        }
+        #box>:nth-child(9):hover{
+            border:2px solid #6161ff;   
+        }
+        #box>:nth-child(1)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#f83c78;
+        }
+        #box>:nth-child(2)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#00c875;
+        }
+      
+        #box>:nth-child(3)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#f04095;
+        }
+        
+        #box>:nth-child(4)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#ff9900;
+        }
+        #box>:nth-child(5)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#00d2d2;
+        }
+        #box>:nth-child(6)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#579bfc;
+        }
+        #box>:nth-child(7)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#ff7575;
+        }
+        #box>:nth-child(8)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#4eccc6;
+        }
+        #box>:nth-child(9)>#check{
+            width:20px;
+            height:20px;
+            float:left;
+            
+            accent-color:#6161ff;
+        }
+        
+        #box img{
+            margin-top: 20px;
+            width:30%;
+            margin-right: 30px;
+            
+        }
+       
+       
+        #section1 button{
+            display:block;
+           margin:80px auto;
+            background-color:#715eff;
+           font-size: 20px;
+           border-radius: 40px;
+           border: none;
+           height:50px;
+           width:200px;
+           color:white;
+           
+        }
+        #sec2-button>p{
+          margin-top:-60px;
+          text-align: center;
+          color:white;
+        }
+        #big-img>img{
+            width:100%;
+            margin-top: -3%;
+           
+        }
+        #section2>p{
+            text-align: center;
+            color:#333333;
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+       #section2>div{
+        width:90%;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(9,1fr);
+        gap:15px;
+       
+       }
+       
+       #section2 > div>div>img{
+        width:100%;
+       }
+       #section2 > div>div>#logo4{
+        width:60px;
+        margin-left:30%;
+       }
+       #section2 > div>div>#logo7{
+        width:60px;
+        margin-left:30%;
+       }
+      #section2>:nth-child(3){
+        margin-top: 100px;
+        width:90%;
+        /* border:1px solid red; */
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-between;
+        
+      }
+      #section2>:nth-child(3) > :nth-child(1){
+        width:80%;
+        /* border:1px solid black; */
+        font-size: 40px;
+        color:#333333;
+        line-height: 50px;
+       
+      }
+      #section2>:nth-child(3) > :nth-child(2){
+        /* border:1px solid black; */
+        font-size: 25px;
+        color:#333333;
+        line-height: 35px;
+        margin-top:15px; 
+        margin-left:20px;
+      }
+      #section2 button{
+        background-color:rgb(97 97 255);
+           font-size: 20px;
+           border-radius: 40px;
+           border: none;
+           height:50px;
+           width:180px;
+           color:white;
+          
+      }
+
+      #section3{
+       
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        
+      }
+      #section3-left{
+        /* border:1px solid red; */
+        margin-top:100px;
+        padding:20px;
+        background-color: #cee7fc;
+        width:94%;
+        border-radius:20px;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+       
+        gap:20px;
+        grid-template-areas:
+        "box1 box2 box3"
+        "box4 box2 box3"
+        "box5 box5 box3"
+        "box6 box7 box3"
+        "box6 box7 box3"
+        ;
+      }
+      #section3-left>div{
+        border-radius: 20px;
+        
+        background-color: white;
+        
+      }
+
+      .card{
+    display:flex;
+      }
+      .card img{
+        width:100%;
+        margin-left: 10%;;
+      }
+      .card h4{
+       margin-left:10%;
+
+       
+      }
+      .card p{
+       margin-left:10%;
+       font-size: 12px;
+       margin-top: -10px;
+        }
+
+      #section3 video{
+        border-radius: 20px;
+        width:100%
+      }
+     
+      #section3-left>div:nth-child(1)>div:nth-child(1),#section3-left>div:nth-child(4)>div:nth-child(1){
+    width:40%;
+    margin-top: 20px;
+
+      }
+      #section3-left>div:nth-child(1)>div>h2,#section3-left>div:nth-child(4)>div>h2{
+    
+    margin-bottom:-10px;
+     margin-left:10px;
+      }
+      #section3-left>div:nth-child(1){
+        grid-area: box1;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+      }
+      #section3-left>div:nth-child(2){
+        grid-area: box2;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #section3-left>div:nth-child(3){
+        grid-area: box3;
+        height:640px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+      }
+      #section3-left>div:nth-child(3)>video{
+        height:100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      #section3-left>div:nth-child(4){
+        grid-area: box4;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #section3-left>div:nth-child(5){
+        grid-area: box5;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #section3-left>div:nth-child(6){
+        grid-area: box6;
+        background-color: #cee7fc;
+
+      }
+      #section3-left>div:nth-child(7){
+        grid-area: box7;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      
+    
+      #section3-right{
+        /* border:1px solid red; */
+        width:95%;
+        margin-top: 100px;
+
+      }
+      #section3-right>:nth-child(1)>img{
+        margin-top:100px;
+        width:100%;
+      }
+
+      #section4{
+        background-color: #0d0e45;
+        color: white;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        /* grid-template-rows: 800px; */
+        gap:20px;
+      }
+       #section4-left{
+        /* border:1px solid red; */
+        height:800px;
+        overflow-y:scroll;
+        width:70%;
+        margin-left: 100px;
+       }
+       #section4-left::-webkit-scrollbar{
+        display: none;
+       }
+      #section4-left>div{
+        /* border:1px solid red; */
+        margin-bottom: 100px;
+      }
+      #section4-left>div:nth-child(2),#section4-left>div:nth-child(4),#section4-left>div:nth-child(6){
+        display: flex;
+        
+        
+      }
+      #section4-left>div:nth-child(2)>div>p,h3, #section4-left>div:nth-child(4)>div>p,h3, #section4-left>div:nth-child(6)>div>p,h3{
+        /* border:1px solid black; */
+        margin-left: 5%;
+       
+        
+        
+      }
+     #section4-left img{
+        margin-top:40%;
+        width:80px;
+       
+      }
+     #section4-left>div:nth-child(1)>p:nth-child(1),#section4-left>div:nth-child(3)>p:nth-child(1),#section4-left>div:nth-child(5)>p:nth-child(1){
+        font-size: 45px;
+     }
+     #section4-left>div:nth-child(1)>p:nth-child(2),#section4-left>div:nth-child(3)>p:nth-child(2),#section4-left>div:nth-child(5)>p:nth-child(2){
+        font-size: 20px;
+        line-height: 30px;
+     }
+    
+    #section4-right{
+        margin-top:30%;
+        margin-left: 10%;
+        /* border:2px solid purple; */
+        width:80%;
+        height:45%;
+    }
+    #section4-right video{
+        width:100%;
+        border-radius: 20px;
+    }
+    #mid{
+        /* border:1px solid red; */
+        width:50%;
+        margin: auto;
+       display:flex;
+     
+       box-shadow:#bcdcfb 0px 19px 38px, #bcdcfb 0px 15px 12px;
+       justify-content: space-evenly;
+
+
+    }
+    #mid>div:hover{
+        cursor: pointer;
+       background-color: #b1cbef;
+    }
+    #mid img{
+        width:30%;
+        margin-bottom: -12%;
+    }
+    #mid img{
+        margin-left:40px;
+        width:30%;
+        margin-bottom: -12%;
+    }
+    #mid p{
+        margin-left: 40px;
+    }
+    #below{
+       margin-top: 10%;
+        display:flex;
+        justify-content: space-between;
+       
+    }
+    #below>div{
+        width:45%;
+        /* border:1px solid red; */
+       
+        
+    }
+    #below>div:nth-child(1){
+        box-shadow: #bcdcfb 0px 22px 70px 4px;
+        margin-left: 10%;
+    }
+    #below>div:nth-child(2){
+    /* border:1px solid red; */
+    margin-top: 10% ;
+    width:25%;
+    height:20%;
+margin-right: 10%;
+    }
+     #below h1{
+        color: #1370f4;
+        font-size: 30px;
+     }
+     #below p{
+        color: #686363;
+        font-size: 20px;
+        line-height: 25px;
+     }
+    #below video{
+        width:100%;
+        
+    }
+    #section5>p:nth-child(1){
+        text-align: center;
+        font-size: 50px;
+        color: #333333;
+    }
+    #section5>p:nth-child(2){
+        margin-top:-20px;
+        text-align: center;
+        font-size: 20px;
+        color: #827878;
+        margin-bottom:4%;
+    }
+
+    
+      
+      #section6 video{
+        width:100%;
+        
+      }
+      #foot{
+        margin-top: 80px;
+        display:grid;
+        grid-template-columns: repeat(6,1fr);
+      }
+      #foot>div{
+        font-size: 14px;
+       font-stretch:expanded;
+
+      }
+      a{
+        display:block;
+        text-decoration: none;
+        color: #80828f;
+        margin-bottom: 20px;
+        margin-left:10px
+      }
+      
+      #foot img{
+        width:40%;
+      }
+      #foot>div>p{
+        margin-left:10px
+      }
+      
+      #foot-mid>div{
+        display:flex;
+
+      }
+
+      #foot-mid img{
+        
+       width:20px;
+       height:20px
+      }
+      #footer-bottom button{
+        width:150px;
+        border:none;
+        background-color: white;
+        margin-left: 100%;
+        font-size: 18px;
+
+      }
+      #footer-bottom{
+        margin-top: 3%;
+        display:flex;
+        justify-content: space-around;
+      }
+      #footer-bottom>div:nth-child(2){
+     margin-left: 10%;
+      }
+      #footer-bottom>div:nth-child(2)>img{
+      width:3%;
+      margin-left:1%;
+    
+      }
+
+      #footer-bottom>div:nth-child(3)>img{
+      width:30%
+     
+      }
+
+      @media screen and (min-width:501px) and (max-width:900px) {
+            #box{
+            /* border:5px solid green; */
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+           }
+           #section2>div{
+       
+           display:grid;
+           grid-template-columns: repeat(3,1fr);
+       }
+       #section2>:nth-child(3){
+      text-align: center;
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        
+        
+      }
+      
+    
+
+ 
+        }
+        @media screen and (min-width:320px) and (max-width:500px) {
+            #box{
+            /* border:5px solid green; */
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        #section2>div{
+       
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+       
+       }
+       #section2>:nth-child(3){
+      text-align: center;
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        
+        
+      }
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+       <section id="Sec-left">
+        <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" alt="logo">
+    
+        <button id="products">
+         Products ∨
+        </button>
+        <button>
+        UseCases ∨
+        </button>
+        <button>
+         Features ∨
+        </button>
+        <button>
+         Resources ∨
+        </button>
+       </section>
+        <section id="Sec-right">
+           <button>Pricing</button>
+           <button>Contact sales</button>
+           <button> Log in</button>
+           <!-- <div id="start"><p> Get Started →</p>
+           </div> -->
+           <div id="start">
+            <button>
+                Get Started →
+            </button>
+    
+           </div>
+          
+        </section>
+          
+        <!-- model
+        <div id="modal1">
+            <div id=" modal content">
+            <span class="close">×</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet optio beatae, repudiandae iusto facilis architecto libero. Commodi accusantium eveniet ad?</p>
+        </div>
+        </div> -->
+
+
+        
+    </nav>
+    <section id="section1">
+        <div id="heading">
+            <h1>
+                A Platform build for a new way of working
+            </h1>
+            <h2>
+                What would you like to manage with monday.com Work OS?
+            </h2>
+        </div>
+        
+        
+        <div id="box">
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Creative & design</p>
+
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn.iconscout.com/icon/free/png-128/care-2387662-1991058.png" alt="">
+                <p>Software development</p>
+
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Marketing</p>
+
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Project management</p>
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Sales & CRM</p>
+
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Task management</p>
+
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>HR</p>
+
+            </div>
+            <div>
+                <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Operation</p>
+
+            </div>
+             <div>
+            <input id="check" type="checkbox">
+                <img src="https://cdn-icons-png.flaticon.com/128/1998/1998397.png" alt="">
+                <p>Know more</p>
+
+            </div>
+        </div>
+        <div id="sec2-button">
+               <button>
+                Get Started →
+              </button>
+              <p>No credit card needed 💫 Unlimited time on Free plan</p>
+        </div>
+        
+    </section>
+    <div id="big-img">
+        <img src="https://i.ibb.co/dgC6p6X/Screenshot-2022-12-14-200505.png" alt="Screenshot-2022-12-14-200505">
+       </div>
+
+    <!-- //section2 -->
+
+    <section id="section2">
+         
+        <p>
+            Trusted by 152,000+ customers worldwide
+        </p>
+        <div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/hulu.png" alt="">
+            </div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/bd.png" alt="">
+            </div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/canva.png" alt="">
+            </div>
+            <div >
+                <img id="logo4"  src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/nhl.png" alt="">
+            </div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/coca_cola.png" alt="">
+            </div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/hubspot.png" alt="">
+            </div>
+            <div>
+                <img id="logo4" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/Electronic_Arts.png" 
+                alt="">
+            </div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/nautica.png" alt="">
+            </div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/customers/logos-v2/universal.png" alt="">
+            </div>
+           
+        </div>
+        <div>
+            <div>
+             <p>The Work OS that lets you
+                shape workflows,<b>your way</b></p>
+            </div>
+            <div>
+             <p>Boost your team’s alignment, efficiency, and productivity by customizing any workflow to fit your needs.</p>
+             <button>
+                Get Started →
+            </button>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div id="section3-left">
+           <div class="card">
+            <div>
+                <img src="https://play-lh.googleusercontent.com/wrAwIwFZRfaMCQ8Z2JN2eJEJpY0_bUoLb_lJpOrcFg94IFlxT9SrIvLdHB9rRCPHMMVi=w240-h480-rw" alt="">
+            </div>
+            <div>
+                <h4>Files coloumn</h4>
+                <p>Add files to items within your board</p>
+            </div>
+           
+           </div>
+           <div>
+            <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/Battery.mp4"></video>
+           </div>
+           <div>
+            <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/MobileApp.mp4"></video>
+           </div>
+           <div class="card">
+            <div>
+                <img src="https://www.apkmirror.com/wp-content/themes/APKMirror/ap_resize/ap_resize.php?src=https%3A%2F%2Fdownloadr2.apkmirror.com%2Fwp-content%2Fuploads%2F2022%2F10%2F38%2F63501244b32f7.png&w=96&h=96&q=100" alt="">
+            </div>
+            <div>
+                <h4> Date c</h4>
+                <p>A visual breakdown of your team's workload</p>
+            </div>
+           
+            
+           </div>
+           <div>
+            <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/Integration.mp4"></video>
+           </div>
+           <div id="vacant">
+            
+           </div>
+           <div>
+            <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/Pie.mp4"></video>
+           </div>
+        </div>
+        <div id="section3-right">
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/fetch/f_auto,q_auto/https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/Dash.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="section4">
+       <div id="section4-left">
+        <div>
+            <p> streamline your work for <b>maximum productivity</b></p>
+            <p>
+                Centralize all your work, processes, tools, and files into one Work OS. Connect teams, bridge silos, and maintain one source of truth across your organization.
+            </p>
+        </div>
+        <div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/r_400/f_auto,q_auto/remote_mondaycom_static/uploads/BarBen/jane.jpeg" alt="">
+            </div>
+            <div>
+                <p>“
+                    We use monday.com for a plethora of use cases, the opportunities this platform provides are limitless.”</p>
+                    <h3>Jane Tham
+                        |
+                        VP of Collaboration Technologies</h3>
+                        <p>Universal Music Group</p>
+            </div>
+           
+          
+        </div>
+        <div>
+            <p>Bring teams together to
+                <b>drive business impact</b>
+            </p>
+            <p>
+                Collaborate effectively organization-wide to get a clear picture of all your work. Stay in the loop with easy-to-use automations and real-time notifications.
+            </p>
+
+        </div>
+
+        <div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/r_400/f_auto,q_auto/remote_mondaycom_static/uploads/BarBen/sarah.jpeg" alt="">
+            </div>
+            <div>
+                <p>“
+                    Since adopting monday.com, our global marketing department has seen a 40% improvement in cross-team collaboration.”</p>
+                    <h3>Sarah Pharr
+                        |
+                        AVP Marketing</h3>
+                        <p>Genpact</p>
+            </div>
+           
+          
+        </div>
+        <div>
+            <p>Stay on track to
+               <b> reach your goals, faster</b>
+            </p>
+               <p>
+                Get a high-level overview of your organization with customizable dashboards. Make confident decisions and easily scale workflows for your evolving needs.
+               </p>
+        </div>
+        <div>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/r_400/f_auto,q_auto/remote_mondaycom_static/uploads/BarBen/baptiste.jpeg" alt="">
+            </div>
+            <div>
+                <p>“
+                    monday.com allows banks to be synchronized between the top-level management figures and local KPIs.”</p>
+                    <h3>Baptiste Ancey
+                        |
+                        Head of Innovation</h3>
+                        <p>Indosuez Wealth Management</p>
+            </div>
+           
+          
+        </div>
+       
+       </div>
+       <div id="section4-right">
+        <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/parallax/goals_dashboard.mp4"></video>
+       </div>
+    </section>
+
+    <section id="section5">
+
+             <p><b>Everything</b> you need for <b>any workflow</b></p>
+             <p>Easily build you ideal workflow with monday.com building blocks</p>
+         
+             <div id="mid">
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/board_icon.svg" alt="">
+                    <p>Boards</p>
+                </div>
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/views_icon.svg" alt="">
+                    <p>Views</p>
+                </div>
+                <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/dashboard_icon.svg" alt="">
+                <p>Dashboard</p>
+                </div>
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/integrations_icon.svg"alt="">
+                <p>Integration</p>
+                </div>
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/automations_icon.svg" alt="">
+                <p>Automations</p>
+                </div>
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/apps_icon.svg" alt="">
+                <p>Apps</p>
+                </div>
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/e_colorize,co_rgb:0F1048/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/docs_icon.svg" alt="">
+                <p>Docs</p>
+                </div>
+             </div>
+             <div id="below">
+                <div>
+                    <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/7_status.mp4"></video>
+                </div>
+                <div>
+                    <h1>
+                        Boards
+                    </h1>
+                    <p>Everything starts with a visual board — the core of monday.com Work OS. Tailor it your way and manage anything from projects to departments.</p>
+                </div>
+             </div>
+    </section>
+    <section id="section6">
+        <video autoplay src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/products/products_video.mp4"></video>
+
+    </section>
+
+    <footer>
+        <div id="foot">
+            <div>
+                <img id="footimg" src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" alt="">
+                <a href="#">Pricing</a><a href="#">Contact us</a><a href="#"> Templates</a><a href="#">SMB</a><a href="#">Enterprise</a><a href="#">Nonprofits</a><a href="#"> Apps marketplace</a><a href="#"> 24/7 support</a>
+            </div>
+            <div>
+                <p>Features</p>
+                <a href="#">Docs</a><a href="#">Integrations</a><a href="#">Automations</a><a href="">Files</a><a href="">Dashboards</a><a href="">Kanban</a><a href="">Gantt</a>
+            </div>
+            <div id="foot-mid">
+                <p>monday products</p>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/wm_icon_footer.png" alt="">
+                    <a href="">monday work management</a>
+                 </div>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/crm_icon_footer.png" alt="">
+                    <a href="">monday sales CRM</a>
+                 </div>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/marketer_icon_footer.png" alt="">
+                    <a href=""> monday marketer</a>
+                 </div>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/projects_icon_footer.png" alt="">
+                    <a href="">monday projects</a>
+                 </div>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/monday_dev_product_management_software.png" alt="">
+                    <a href="">monday dev</a>
+                 </div>
+
+                 <p>More by monday.com</p>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/canvas_icon_footer.png" alt="">
+                    <a href="">Canvas</a>
+                 </div>
+                 <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/workforms_icon_footer.png" alt="">
+                    <a href="">Workforms</a>
+                 </div>
+                
+            </div>
+            <div>
+                <p>Use cases</p>
+                <a href="">Marketing</a><a href="">Project management</a><a href="">Sales</a><a href="">Developers</a><a href="">HR</a><a href="">IT</a><a href="">Operations</a><a href="">Construction</a>
+            </div>
+            <div>
+                <p>Company</p>
+                <a href="">About us</a><a href="">Careers-We're hiring!</a><a href="">monday-U</a><a href="">Press</a><a href="">Customer stories</a><a href="">Become a partner</a><a href="">Sustainability & ESG</a><a href=""> Affiliates</a><a href="">Digital Lift</a><a href="">Inverstor relations</a>
+            </div>
+            <div>
+                <p>Resources</p>
+                <a href="">Help Center</a><a href="">Community</a><a href="">Blog</a><a href="">Webinars</a><a href="">Startup for startup</a><a href="">Global events</a><a href="">App development</a><a href="">find a partner</a><a href="">compare</a>
+            </div>
+        </div>
+       <hr>
+       <div id="footer-bottom">
+        <div>
+            <button>
+                🌐 English ▾
+            </button>
+        </div>
+    
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384019.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/128/3128/3128219.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/128/3128/3128212.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/128/3046/3046127.png" alt="">
+
+        </div>
+        <div>
+            <img src="https://premierwallets.com/assets/images/all-img/btnPlayStore1.png" alt="">
+            <img src="https://premierwallets.com/assets/images/all-img/btnAppStore1.png" alt="">
+        </div>
+       </div>
+    </footer>
+  
+    
+</body>
+
+<script>
+  
+   
+</script>
+</html>
