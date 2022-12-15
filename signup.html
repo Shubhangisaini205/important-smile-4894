@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in </title>
+    <style>
+        body{
+           
+            font-family: Arial;
+        }
+        #container{
+            display:flex;
+    
+            width:57%;
+            margin:auto;
+            margin-top: 7%;
+            background-color: white;
+            border-radius:30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container>div:nth-child(1){
+            width:70%;
+            /* border:1px solid green; */
+            text-align: center;
+
+        }
+        #container>div:nth-child(2){
+        /* border:2px solid black; */
+        width:30%;
+
+        }
+        #big{
+            width:100%;
+            height:100%;
+           border-top-right-radius: 30px;
+           border-bottom-right-radius: 30px;
+        }
+        #mail{
+            text-align: left;
+            margin-left: 105px;
+        }
+        input{
+            display:block;
+            margin: auto;
+            font-size: 120%;
+            width:380px;
+            padding:8px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border:2px solid #9bc5f3;
+        }
+        #continue{
+            width:400px;
+            background-color: #0073ea;
+            padding:12px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #google{
+           margin: auto;
+            border:1px solid #afaaaa;
+            background-color:white;
+            width:400px;
+            display: flex;
+            justify-content: space-evenly;
+            color:#686363;
+            border-radius: 5px;;
+           margin-bottom: 20px;
+           border:2px solid #9bc5f3;
+          
+        }
+        #google >a{
+         margin-bottom: -10px;
+         margin-top:10px;
+         text-decoration: none;
+         font-size: 17px;
+         color: #6babf0;
+         margin-left:-90px;
+        
+        }
+    
+        #google img{
+            width:80%;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        #account{
+            width:50%;
+          display:flex;
+          margin:auto;
+          
+        }
+        #account p{
+            margin-top: -1px;
+        }
+        #account a{
+            text-decoration: none;
+           color: #0073ea;
+        }
+
+    </style>
+</head>
+<body>
+     <div id="container">
+        <div>
+         <div>
+            <h1>Welcome to monday.com</h1>
+            <h4>Get started - it's free. No credit card needed.</h4>
+            <p id="mail">Enter email</p>
+            <form>
+                <input type="email" placeholder="name@company.com">
+     <input id="continue" type="submit" value="Continue">
+            </form>
+            <h5>OR</h5>
+            <button id="google">
+                <div>
+                    <img src="https://cdn.monday.com/images/logo_google_v2.svg" alt="">
+                </div>
+               
+               <a href="https://google.com">Continue with Google</a>
+        
+             </button>
+             <div id="account">
+                <p id="p">Already have an account?</p>
+                <div>
+                  <a href="signin.html">Log in</a>
+                </div>
+             </div>
+         </div>
+        </div>
+        <div>
+            <img id="big" src="https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/soft-welcome.png" alt="">
+        </div>
+     </div>
+
+</body>
+</html>

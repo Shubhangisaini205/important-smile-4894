@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: 'Arial';
+        }
+        nav{
+            background-color:#f7f7f7 ;
+        }
+        nav img{
+            width:12%;
+            margin:10px;
+            
+        }
+        #container{
+          width:40%;
+          margin: 4% auto;
+          /* border:1px solid red; */
+          text-align: center;
+        }
+        #container>p:nth-child(1){
+            font-size: 45px;
+            color:#847d7d;  
+        }
+        h4{
+            font-size: 17px;
+        }
+        input{
+            font-size: 120%;
+            width:300px;
+            padding:8px;
+            margin-bottom: 20px;
+        }
+        #next{
+            width:320px;
+            background-color: #0073ea;
+            padding:12px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        p{
+            text-align: center;
+            /* border:1px solid red; */
+            color:#686363;
+        }
+        #google{
+           margin: auto;
+            border:1px solid #afaaaa;
+            background-color:white;
+            width:120px;
+            display: flex;
+            justify-content: space-evenly;
+            color:#686363;
+            border-radius: 5px;;
+           margin-bottom: 20px;
+        }
+
+        #google >a{
+         margin-bottom: -10px;
+         margin-top:10px;
+         text-decoration: none;
+         font-size: 17px;
+         color: #686363;
+        }
+    
+        #google img{
+            width:70%;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        #notaccount{
+            width:50%;
+          display:flex;
+          margin:auto;
+          
+        }
+        #notaccount p{
+            margin-top: -1px;
+        }
+        #notaccount a{
+            text-decoration: none;
+           color: #0073ea;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="https://cdn.monday.com/images/logos/monday_logo_short.png" alt="logo">
+    </nav>
+    <div id="container">
+     <p>Log in to your account</p>
+     <h4>Enter your work email address</h4>
+     <form
+     >
+     <input type="email" placeholder="Example@company.com">
+     <input id="next" type="submit" value=" Next →">
+    </form>
+
+     <div id="hr">
+        <!-- <hr> -->
+        <p>
+            Or Sign in with 
+        </p>
+        <!-- <hr> -->
+     </div>
+     <button id="google">
+        <div>
+            <img src="https://cdn.monday.com/images/logo_google_v2.svg" alt="">
+        </div>
+       <!-- <h3>Google</h3> -->
+       <a href="https://google.com">Google</a>
+
+     </button>
+     <div id="notaccount">
+        <p id="p">Don't have an account yet?</p>
+        <div>
+          <a href="signup.html">Sign up</a>
+        </div>
+     </div>
+    
+    </div>
+</body>
+</html>
