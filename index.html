@@ -79,15 +79,16 @@
             color: rgb(93 93 93);
             font-size: 15px;
         }
-        #start>button{
+        #start>a{
           
-            background-color:rgb(97 97 255);
+          background-color:rgb(97 97 255);
            font-size: 18px;
            border-radius: 40px;
            border: none;
-           height:40px;
-           width:140px;
+          margin-top:-10px;
+           width:120px;
            color:white;
+           padding:10px;
         }
        
         #start:hover{
@@ -237,15 +238,16 @@
         }
        
        
-        #section1 button{
-            display:block;
+        #section1 a{
+            /* display:block; */
            margin:80px auto;
             background-color:#715eff;
            font-size: 20px;
            border-radius: 40px;
            border: none;
-           height:50px;
-           width:200px;
+           /* height:50px; */
+           width:150px;
+           padding:15px;
            color:white;
            
         }
@@ -253,6 +255,7 @@
           margin-top:-60px;
           text-align: center;
           color:white;
+          padding-bottom:80px;
         }
         #big-img>img{
             width:100%;
@@ -310,14 +313,16 @@
         margin-top:15px; 
         margin-left:20px;
       }
-      #section2 button{
+      #section2 a{
         background-color:rgb(97 97 255);
            font-size: 20px;
            border-radius: 40px;
            border: none;
-           height:50px;
-           width:180px;
+           /* height:50px; */
+           width:150px;
+           padding:10px;
            color:white;
+           padding-left:40px;
           
       }
 
@@ -638,11 +643,11 @@ margin-right: 10%;
      
       }
       #products{
-        /* display:none; */
+        display:none;
         /* border:1px solid red; */
         background-color:white;
         position:relative;
-        bottom:5234px;
+        bottom:5338px;
         padding-bottom: 70px;
       
         
@@ -776,7 +781,7 @@ margin-right: 10%;
        /* border:1px solid red; */
         background-color:white;
          position:relative;
-         bottom:5213px;
+         bottom:5321px;
         padding-bottom: 70px;
          padding-top:30px;
         
@@ -936,12 +941,14 @@ height:40px;
            <button>Pricing</button>
            <button>Contact sales</button>
            <button> Log in</button>
+           
            <!-- <div id="start"><p> Get Started →</p>
            </div> -->
            <div id="start">
-            <button>
+            <!-- <button>
                 Get Started →
-            </button>
+            </button> -->
+            <a href="signup.html">Get Started →</a>
     
            </div>
           
@@ -958,6 +965,8 @@ height:40px;
 
         
     </nav>
+
+    <!-- section1 -->
     <section id="section1">
         <div id="heading">
             <h1>
@@ -1025,9 +1034,10 @@ height:40px;
             </div>
         </div>
         <div id="sec2-button">
-               <button>
+               <!-- <button>
                 Get Started →
-              </button>
+              </button> -->
+              <a href="signup.html">Get Started → </a>
               <p>No credit card needed 💫 Unlimited time on Free plan</p>
         </div>
         
@@ -1081,9 +1091,10 @@ height:40px;
             </div>
             <div>
              <p>Boost your team’s alignment, efficiency, and productivity by customizing any workflow to fit your needs.</p>
-             <button>
+             <!-- <button>
                 Get Started →
-            </button>
+            </button> -->
+            <a href="signup.html">Get Started →</a>
             </div>
         </div>
     </section>
@@ -1259,7 +1270,7 @@ height:40px;
              </div>
     </section>
     <section id="section6">
-        <video autoplay src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/products/products_video.mp4"></video>
+        <video muted loop="" preload="metadata" autoplay="" src="vedio/products_video.mp4"></video>
 
     </section>
 
