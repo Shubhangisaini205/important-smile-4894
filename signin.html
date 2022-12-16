@@ -101,10 +101,11 @@
     <div id="container">
      <p>Log in to your account</p>
      <h4>Enter your work email address</h4>
-     <form
+     <form id="form"
      >
-     <input type="email" placeholder="Example@company.com">
-     <input id="next" type="submit" value=" Next →">
+     <input type="email" placeholder="Example@company.com" id="email">
+     <input type="password" placeholder="Password" id="password">
+     <input id="next" type="submit" value="Log in">
     </form>
 
      <div id="hr">
@@ -125,10 +126,53 @@
      <div id="notaccount">
         <p id="p">Don't have an account yet?</p>
         <div>
-          <a href="signup.html">Sign up</a>
+          <a href="signup.html">Sign up</a> 
         </div>
      </div>
     
     </div>
 </body>
+<script>
+    let myform = document.getElementById("form");
+    let user_data = JSON.parse(localStorage.getItem("accounts-data"));
+
+    myform.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let formData={
+        email: myform.email.value,
+        password: myform.password.value,
+        }
+     
+        let isPresent =false
+       for(let i = 0; i < user_data.length;i++){
+        if( user_data[i].email == formData.email &&  user_data[i].password == formData.password ){
+            isPresent= true;
+            break;
+        }
+       }
+       if(isPresent==true){
+        alert("Sign in Successful");
+        location.href="./home.html"
+       }else{
+        alert("Wrong Credentials");
+       }
+
+        //OR
+
+    // let check = user_data.filter((el,ind) => {
+    //     if(el.email == formData.email && el.password == formData.password){
+    //       return true
+    //     }
+    //   })
+
+      
+    //   if(check.length != 0)alert("Sign in Successful")
+    //   else alert("Wrong Credentials");
+
+  
+
+      
+    });
+
+</script>
 </html>

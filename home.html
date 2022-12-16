@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <script src="https://kit.fontawesome.com/fac377af51.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        #nav{
+          height:100vh;
+          width:70px;
+          background-color: #292f4c;
+          position:sticky;
+          top:0;
+          bottom:0;
+        }
+        
+        #nav i{
+            margin-left:8px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            font-size: 20px;
+          color:white;
+        
+          
+          
+         
+          
+        }
+        #nav img{
+           
+            margin-left:3px;
+            margin-top:5px;
+          width:60%;
+          color:white;
+        
+          padding:5px;
+          
+        }
+       
+        #nav>div:nth-child(2){
+            /* border:1px solid red; */
+            margin-top: 80px;
+            
+        }
+        hr{
+            margin:10px;
+        }
+        #nav>div>div{
+            /* border:1px solid green; */
+            width:40px;
+           margin-top:15px;
+           margin-left:13px;
+           border-radius: 10px;
+        }
+        #nav>div>div:hover{
+           
+           
+           background-color:rgb(13, 13, 15)
+        }
+        main{
+            display:flex;
+        }
+        #screen{
+            background-color:whitesmoke;
+            /* border:1px solid red; */
+            width:100%;
+            height:100vh;
+        overflow-y:scroll;
+        }
+        #screen::-webkit-scrollbar{
+        display: none;
+       }
+       header{
+        display: flex;
+        justify-content: space-between;
+        /* border:1px solid red; */
+        height:100px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       }
+       /* header>div{
+
+        /* border:1px solid black; 
+       } */
+       header>div:nth-child(2){
+        /* border:1px solid blue; */
+        display:flex;
+       
+        width:25%;
+
+       }
+       header>div:nth-child(2)>div{
+        padding-top:3%;
+        padding-left:2%;
+        padding-bottom:2%;
+        margin:8% 4% 8% 7%;
+        /* border:1px solid green; */
+         width:30%;
+         border-radius: 10px;
+        
+
+       }
+       header>div:nth-child(1){
+    margin-left: 70px;
+       }
+       #qsearch{
+        padding-right:20px;
+        margin-left:-3%;
+        background-color: #0073ea;
+        color:white;
+        /* border:1px solid red; */
+       }
+       #qsearch a{
+        font-size: 14px;
+        background-color: #0073ea;
+        color:white;
+       }
+       
+      
+     
+       header a{
+        text-decoration: none;
+        margin-left: 2%;
+       color:black;
+       }
+   header h2{
+    font-size:20px;
+    margin-top: -10px;
+  }
+     #section2{
+        border:1px solid red;
+     
+     }
+     #sec2-left{
+        border:1px solid green;
+        width:70%;
+     }
+     #rec-visited{
+        border:1px solid rgb(160, 147, 147);
+        width:30%;
+        margin-left:100px;
+        margin-bottom:20px;
+     }
+     #rec-visited img{
+        height:100%;
+        width:94%;
+        margin-left: 3%;
+        margin-top: 3%;
+        border-radius: 10px;
+        /* margin-top:-0.1px; */
+        margin-bottom:-15px;
+     }
+     #rec-visited>div>div{
+        /* border:2px solid blue; */
+       display:flex;
+      
+     }
+     #rec-visited>div>div>div>i{
+      margin-top: 22px;
+      margin-right:15px
+     }
+     #r-icon{
+        margin-left:130px;
+     }
+     #rec-bottom{
+        height:50px;
+        margin-top: -30px;
+        font-size: 15px;
+     }
+     #rec-bottom img{
+margin-right: 10px;
+        height:20px;
+     }
+     #rec-bottom p{
+        color:rgb(94, 91, 91);
+     }
+     h3{
+        margin-left:70px;
+     } 
+     #inbox{
+        height:200px;
+        border:1px solid red;
+        margin-left: 100px;
+        margin-right:20px;
+     }
+
+
+    </style>
+</head>
+<body>
+    <main>
+    <div id="nav">
+        <div>
+            <div>
+                <img src="https://cdn.monday.com/images/logos/monday_logo_icon.png" alt="">
+            </div>
+            <hr>
+            <div>
+                <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/wm_icon_footer.png" alt="">
+            </div>
+            <div>
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div>
+                <i class="fa-regular fa-inbox"></i>
+            </div>
+            <div>
+            <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div>
+                <i class="fa-regular fa-star"></i>
+            </div>
+        </div>
+        
+        <div>
+            <div>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>            </div>
+            <div>
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+            <hr>
+            <div>
+                <i class="fa-solid fa-globe"></i> 
+                  </div>
+            <div>
+                <img src="https://cdn.monday.com/images/dapulse_default_photo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="screen">
+        <section id="section1">
+            <header>
+                <div>
+                    <p>
+                      Hello User, Good Day
+                    
+                    </p>
+                    <h2>Be proud what you have done today!</h2>
+                    <h2>:)</h2>
+                </div>
+                <div>
+                    <div>
+                        <a href="#">🖤 Give feedback</a>
+                    </div>
+                    <div id="qsearch">
+                        <i class="fa-solid fa-bolt"></i>
+                        <a href="#">Quick Search</a>
+                    </div>
+                </div>
+            </header>
+
+        </section>
+
+        <section id="section2">
+            <div id="sec2-left">
+                
+                <h3>▾ Recently visited</h3>
+                <div id="rec-visited">
+                    <div>
+                        <img src="https://cdn.monday.com/images/quick_search_recent_board.svg" alt="">
+                        <div >
+                            <div>
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+                            <div>
+                                <h4>Your first board</h4>
+                            </div>
+                            <div id="r-icon">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+                        </div>
+                        <div id="rec-bottom">
+                            <div>
+                                <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/wm_icon_footer.png" alt="">
+
+                            </div>
+                          <div>
+                            <p> Work management > Main workspace</p>
+                          </div>
+                        </div>
+                       
+                    </div>
+                   
+                </div>
+                <div>
+                    <h3> ▾ Inbox</h3>
+                    <div id="inbox">
+                     
+                    </div>
+                </div>
+                <div>
+                    <h3> ▾ My workspaces</h3>
+                    <div id="workspace">
+                     <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        
+
+        </section>
+        
+ 
+    </div>
+
+</main>
+
+</body>
+</html>

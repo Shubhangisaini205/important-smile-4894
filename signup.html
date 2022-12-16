@@ -7,12 +7,24 @@
     <title>Sign in </title>
     <style>
         body{
-           
+           margin:0px;
+           padding:0px;
             font-family: Arial;
         }
+        /* #back-image{
+            position:relative;
+            height:100vh;
+            background-image: url("https://i.ibb.co/X4XNfJp/signup-background.png");
+            background-repeat: no-repeat;
+            background-image: center;
+            background-size: cover;
+            filter:blur(4px);
+
+        } */
         #container{
+            /* position:absolute; */
+            /* left:22%; */
             display:flex;
-    
             width:57%;
             margin:auto;
             margin-top: 7%;
@@ -47,7 +59,7 @@
             font-size: 120%;
             width:380px;
             padding:8px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             border-radius: 5px;
             border:2px solid #9bc5f3;
         }
@@ -106,14 +118,17 @@
     </style>
 </head>
 <body>
+    <div id="back-image">
      <div id="container">
         <div>
          <div>
             <h1>Welcome to monday.com</h1>
             <h4>Get started - it's free. No credit card needed.</h4>
             <p id="mail">Enter email</p>
-            <form>
-                <input type="email" placeholder="name@company.com">
+            <form id="form">
+                <input type="email" placeholder="name@company.com" id="email">
+                <input type="text" placeholder="Name" id="name">
+                <input type="password" placeholder="Password" id="password">
      <input id="continue" type="submit" value="Continue">
             </form>
             <h5>OR</h5>
@@ -137,6 +152,27 @@
             <img id="big" src="https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/soft-welcome.png" alt="">
         </div>
      </div>
-
+    </div>
 </body>
+<script>
+    let myform = document.getElementById("form")
+    let data = JSON.parse(localStorage.getItem("accounts-data"))||[];
+    myform.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let formData={
+        email: myform.email.value,
+        name:myform.name.value,
+        password: myform.password.value,
+        }
+        data.push(formData);
+        // console.log(data);
+        localStorage.setItem("accounts-data",JSON.stringify(data));
+        if( myform.email.value != "" && myform.name.value != ""&& myform.password.value != ""){
+            alert("account created succesfully")
+            location.href="./signin.html"
+        }
+  
+        
+    });
+</script>
 </html>
