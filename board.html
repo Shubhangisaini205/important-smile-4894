@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monday.board</title>
+    <title>Monday_board</title>
     <script src="https://kit.fontawesome.com/fac377af51.js" crossorigin="anonymous"></script>
     <style>
           body{
@@ -190,7 +190,7 @@ border:1px solid black;
     <main>
         <div id="nav">
             <div>
-                <div>
+                <div id="home">
                     <img src="https://cdn.monday.com/images/logos/monday_logo_icon.png" alt="">
                 </div>
                 <hr>
@@ -230,7 +230,9 @@ border:1px solid black;
                 <div>
                     <img src="https://cdn.monday.com/images/dapulse_default_photo.png" alt="">
                 </div>
+                
             </div>
+            
         </div>
          <div id="screen">
             <header>
@@ -379,5 +381,8 @@ border:1px solid black;
          table.append(row1)
         })
     }
+    document.getElementById("home").addEventListener("click",()=>{
+        location.href="./home.html"
+    })
 </script>
 </html>
