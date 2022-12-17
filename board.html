@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monday.board</title>
+    <script src="https://kit.fontawesome.com/fac377af51.js" crossorigin="anonymous"></script>
+    <style>
+          body{
+            margin:0;
+            padding:0;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        #nav{
+          height:100vh;
+          width:70px;
+          background-color: #292f4c;
+          position:sticky;
+          top:0;
+          bottom:0;
+        }
+        
+        #nav i{
+            margin-left:8px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            font-size: 20px;
+          color:white;
+        
+          
+          
+         
+          
+        }
+        #nav img{
+           
+            margin-left:3px;
+            margin-top:5px;
+          width:60%;
+          color:white;
+        
+          padding:5px;
+          
+        }
+       
+        #nav>div:nth-child(2){
+            /* border:1px solid red; */
+            margin-top: 80px;
+            
+        }
+        hr{
+            margin:10px;
+        }
+        #nav>div>div{
+            /* border:1px solid green; */
+            width:40px;
+           margin-top:15px;
+           margin-left:13px;
+           border-radius: 10px;
+        }
+        #nav>div>div:hover{
+           
+           
+           background-color:rgb(13, 13, 15)
+        }
+        main{
+            display:flex;
+        }
+        #screen{
+width:100%;
+
+border:1px solid black;
+       }
+
+         header{
+            display:flex;
+            /* border:1px solid red; */
+          justify-content: space-between;
+          width:100%;
+          border-bottom:1px solid #050712;
+         
+         }
+          header>div{
+            /* border:1px solid blue; */
+            margin-left:70px;
+            margin-right:60px;
+          }
+           header>div:nth-child(1)>div:nth-child(1){
+            display:flex;
+           }
+           header>div:nth-child(1) i{
+           margin-top: 30px;
+           margin-left: 15px;
+           font-size: 18px;
+           color:rgb(142, 140, 140)
+           }
+           header>div:nth-child(1) p{
+          margin-top: -6px;
+          font-size: 16px;
+           color:rgb(142, 140, 140)
+           }
+           header>div:nth-child(1) a{
+            text-decoration: none;
+            margin-left: 10px;
+           }
+           #head-right>button{
+           margin:30px 0px 0px 10px;
+           font-size:15px;
+           border:none;
+           background-color: white;
+           padding:7px;
+           border-radius: 5px;
+           }
+           #head-right>button:hover{
+          background-color: #c3c7dc;
+           }
+
+           #head-right a{
+            text-decoration: none;
+           }
+           #head-right i{
+           font-size: 20px;
+           }
+           #head-right #invite{
+            border:1px solid rgb(231, 223, 223);           
+           }
+           #top{
+            margin-top:30px;
+           }
+           #top>button,select{
+            margin-left:18px;
+            padding:8px;
+            border:none;
+            background-color: white;
+            color:rgb(104, 100, 100);
+            font-size: 15px;
+            border-radius: 5px;
+           }
+           #top>button:hover,select:hover{
+            background-color: #c3c7dc;
+           }
+           #top>select:nth-child(1){
+            background-color: #0073ea;
+            color:white;
+           }
+           #top>select:nth-child(1):hover{
+            background-color: rgb(49, 49, 207)
+           }
+           table{
+            width:100%;
+            margin-left: 80px;
+            border-collapse:collapse;
+            display:grid;
+            
+           }
+            td{
+                border:1px solid black;        padding-right:300px;
+                padding:10px;
+
+            }
+            th{
+                border:1px solid black;
+                padding-right:300px;
+                padding:10px;
+            }
+            #item{
+                padding-right:300px;
+                
+            }
+            #plus{
+                padding-right:700px;
+            }
+            
+            input{
+                font-size: 24px;
+                margin-left:423px
+            }
+            #add{
+             font-size: 23px;
+             margin-left: 20px;
+             margin-top:10px;
+            }
+            
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="nav">
+            <div>
+                <div>
+                    <img src="https://cdn.monday.com/images/logos/monday_logo_icon.png" alt="">
+                </div>
+                <hr>
+                <div>
+                    <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/wm_icon_footer.png" alt="">
+                </div>
+                <div>
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div>
+                    <i class="fa-regular fa-inbox"></i>
+                </div>
+                <div>
+                <i class="fa-regular fa-calendar"></i>
+                </div>
+                <div>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>            </div>
+                <div>
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                <hr>
+                <div>
+                    <i class="fa-solid fa-globe"></i> 
+                      </div>
+                <div>
+                    <img src="https://cdn.monday.com/images/dapulse_default_photo.png" alt="">
+                </div>
+            </div>
+        </div>
+         <div id="screen">
+            <header>
+                <div>
+                    <div>
+                        <div>
+                            <h1>Your First board</h1>
+                            
+                        </div>
+                        <div>
+                        <i class="fa-regular fa-xmark"></i>
+                        </div>
+                        <div>
+                        <i class="fa-regular fa-star"></i>
+                        </div>
+
+                    </div>
+                    <div>
+                        <p>Add your board's desciption here <a href="#"> See More</a></p>
+                    </div>
+                   
+
+    
+                </div>
+                <div id="head-right">
+                    <button>
+                     <a href="">Workflows center</a>
+                    </button>
+                    <button>
+                        <a href="">Activity</a>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </button>
+                    <button id="invite">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <a href="">Invite / 1</a>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+
+                </div>
+
+            </header>
+            <section id="top">
+           
+                <!-- <button>New Items</button> -->
+                <select>
+                    <option value="">New Items</option>
+                </select>
+          
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+            <button>
+                <i class="fa-regular fa-circle-user"></i>
+                Person
+            </button>
+            <select>
+                <option value="">Filter</option>
+            </select>
+                
+           
+            <button>∨ Sort</button>
+            <button>
+                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                 Hide</button>
+            <button>⋯</button>
+            </section>
+            <section>
+                <h1>Group 1</h1>
+                <table id="table">
+                   <tr>
+                    <th id="item">Item</th>
+                    <th id="person">Person</th>
+                    <th id=" status">Status</th>
+                    <th>Date</th>
+                    <th id="plus">+</th>
+                   </tr>
+                   <tr>
+                   <td>Item 1</td>
+                   
+                   <td>  <i class="fa-regular fa-circle-user"></i></td>
+                   <td>Working on it</td>
+                   <td>dd-mm-yyyy</td>
+                   <td></td>
+                   </tr>
+                   <tr>
+                    <td>Item 2</td>
+                    <td>  <i class="fa-regular fa-circle-user"></i></td>
+                    <td>Done</td>
+                    <td>dd-mm-yyyy</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                        <td>Item 3</td>
+                        <td>  <i class="fa-regular fa-circle-user"></i></td>
+                        <td>Stuck</td>
+                        <td>dd-mm-yyyy</td>
+                        <td></td>
+                        </tr>
+
+                </table>
+                <input type="text" placeholder="+ items" id="addItem">
+                <button id="add">
+                    Add Items
+                </button>
+            </section>
+
+
+         </div>
+        
+    </main>
+    
+</body>
+<script>
+    let input = document.getElementById("addItem");
+    let btn = document.getElementById("add");
+    let table = document.getElementById("table")
+    let data = [];
+    let formdata = {
+        item:input.value,
+
+   }
+   data.push(formdata)
+
+
+    btn.addEventListener("click",function(){
+        display(data);
+    })
+
+    function display(data){
+        data.forEach((element)=>{
+         let row1 = document.createElement("tr");
+         let col1 = document.createElement("td");
+         let col2 = document.createElement("td");
+        //  col2.style.paddingRight="64px"
+         let col3 = document.createElement("td");
+        //  col3.style.paddingRight="110px"
+         let col4 = document.createElement("td");
+         let col5 = document.createElement("td");
+         col1.innerText = input.value
+        //  col1.style.paddingRight="20%"
+
+         row1.append(col1,col2,col3,col4,col5);
+         table.append(row1)
+        })
+    }
+</script>
+</html>
