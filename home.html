@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>monday.com | Home page</title>
+    <link rel="icon" href="https://cdn.monday.com/images/logos/monday_logo_icon.png"
+    type="image/x-icon">
     <script src="https://kit.fontawesome.com/fac377af51.js" crossorigin="anonymous"></script>
     <style>
         body{
@@ -363,7 +365,7 @@ margin-left: 15px;
                 <img src="https://cdn.monday.com/images/logos/monday_logo_icon.png" alt="">
             </div>
             <hr>
-            <div>
+            <div id="board">
                 <img src="https://dapulse-res.cloudinary.com/image/upload/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/footer/wm_icon_footer.png" alt="">
             </div>
             <div>
@@ -551,4 +553,10 @@ margin-left: 15px;
 </main>
 
 </body>
+<script>
+    document.getElementById("board").addEventListener("click",()=>{
+        location.href="./board.html"
+        
+    })
+</script>
 </html>

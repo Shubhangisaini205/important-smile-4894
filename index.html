@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>monday.com | A new way of working</title>
+    <link rel="icon" href="https://cdn.monday.com/images/logos/monday_logo_icon.png"
+        type="image/x-icon">
     <style>
         body{
         font-family: 'Poppins', sans-serif;
@@ -89,6 +91,10 @@
            width:120px;
            color:white;
            padding:10px;
+        }
+        #start>a:hover{
+          background-color: #0548a5;
+          
         }
        
         #start:hover{
@@ -175,7 +181,6 @@
             width:20px;
             height:20px;
             float:left;
-            
             accent-color:#00c875;
         }
       
@@ -251,6 +256,11 @@
            color:white;
            
         }
+        #section1 a:hover{
+          background-color: #0548a5;
+        }
+
+        
         #sec2-button>p{
           margin-top:-60px;
           text-align: center;
@@ -324,6 +334,9 @@
            color:white;
            padding-left:40px;
           
+      }
+      #section2 a:hover{
+        background-color: #0548a5;
       }
 
       #section3{
@@ -642,6 +655,11 @@ margin-right: 10%;
       width:30%
      
       }
+
+      footer a:hover{
+        color:blue;
+        text-decoration:underline;
+      }
       #products{
         display:none;
         /* border:1px solid red; */
@@ -915,6 +933,19 @@ height:40px;
         
       }
         }
+        #login>a{
+          margin-top: 5px;
+          padding-right: 10px;
+           
+        }
+        #login>a:hover{
+            color:blue;
+        }
+       
+       
+
+
+       
 
 
     </style>
@@ -925,22 +956,25 @@ height:40px;
         <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" alt="logo">
     
         <button id="nav-products">
-         Products ∨
+         Products ▼
         </button>
         <button id="nav-usecase">
-        UseCases ∨
+        UseCases ▼
         </button>
         <button>
-         Features ∨
+         Features ▼
         </button>
         <button>
-         Resources ∨
+         Resources ▼
         </button>
        </section>
         <section id="Sec-right">
            <button>Pricing</button>
            <button>Contact sales</button>
-           <button> Log in</button>
+           <button id="login">
+            <a href="signin.html">Log in</a>
+            
+        </button>
            
            <!-- <div id="start"><p> Get Started →</p>
            </div> -->
@@ -948,7 +982,7 @@ height:40px;
             <!-- <button>
                 Get Started →
             </button> -->
-            <a href="signup.html">Get Started →</a>
+            <a id="get" href="signup.html">Get Started →</a>
     
            </div>
           
@@ -1112,9 +1146,11 @@ height:40px;
            </div>
            <div>
             <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/Battery.mp4"></video>
+           
            </div>
            <div>
             <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/Masonry/final/MobileApp.mp4"></video>
+            
            </div>
            <div class="card">
             <div>
@@ -1218,7 +1254,7 @@ height:40px;
        
        </div>
        <div id="section4-right">
-        <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/parallax/goals_dashboard.mp4"></video>
+        <video  muted loop="" preload="metadata" autoplay="" src="vedio/goals_dashboard.mp4"></video>
        </div>
     </section>
 
@@ -1259,7 +1295,7 @@ height:40px;
              </div>
              <div id="below">
                 <div>
-                    <video src="https://dapulse-res.cloudinary.com/video/upload/q_auto,f_auto,cs_copy/Generator_featured%20images/Home%20Page%20-%202022%20Rebrand/tabs/final-videos-tabs/7_status.mp4"></video>
+                    <video  muted loop="" preload="metadata" autoplay="" src="vedio/vedio3.mp4"></video>
                 </div>
                 <div>
                     <h1>
@@ -1520,6 +1556,7 @@ height:40px;
         products.style.display="none";
     }else{
         products.style.display="block";
+        body.style.height="100vh";
         // body.style.backgroundColor="blur";
     }
    
@@ -1527,8 +1564,10 @@ height:40px;
   nav_usecase.addEventListener("click",function(){
     if( usecase.style.display=="block"){
         usecase.style.display="none";
+
     }else{
         usecase.style.display="block";
+        body.style.height="100vh";
         // body.style.backgroundColor="blur";
     }
    

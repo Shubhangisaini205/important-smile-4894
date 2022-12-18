@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>monday.com | Where teams get workdone</title>
+    <link rel="icon" href="https://cdn.monday.com/images/logos/monday_logo_icon.png"
+    type="image/x-icon">
     <style>
         body{
             margin:0;
@@ -96,7 +98,7 @@
 </head>
 <body>
     <nav>
-        <img src="https://cdn.monday.com/images/logos/monday_logo_short.png" alt="logo">
+        <img id="monday" src="https://cdn.monday.com/images/logos/monday_logo_short.png" alt="logo">
     </nav>
     <div id="container">
      <p>Log in to your account</p>
@@ -142,7 +144,7 @@
         email: myform.email.value,
         password: myform.password.value,
         }
-     
+    
         let isPresent =false
        for(let i = 0; i < user_data.length;i++){
         if( user_data[i].email == formData.email &&  user_data[i].password == formData.password ){
@@ -173,6 +175,10 @@
 
       
     });
+    document.getElementById("monday").addEventListener("click",function(){
+        location.href="./index.html"
+        
+    })
 
 </script>
 </html>
