@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONDAY</title>
+    <title>monday.com | A new way of working</title>
+    <link rel="icon" href="https://cdn.monday.com/images/logos/monday_logo_icon.png"
+        type="image/x-icon">
     <style>
         body{
         font-family: 'Poppins', sans-serif;
@@ -89,6 +91,10 @@
            width:120px;
            color:white;
            padding:10px;
+        }
+        #start>a:hover{
+          background-color: #0548a5;
+          
         }
        
         #start:hover{
@@ -175,7 +181,6 @@
             width:20px;
             height:20px;
             float:left;
-            
             accent-color:#00c875;
         }
       
@@ -251,6 +256,11 @@
            color:white;
            
         }
+        #section1 a:hover{
+          background-color: #0548a5;
+        }
+
+        
         #sec2-button>p{
           margin-top:-60px;
           text-align: center;
@@ -324,6 +334,9 @@
            color:white;
            padding-left:40px;
           
+      }
+      #section2 a:hover{
+        background-color: #0548a5;
       }
 
       #section3{
@@ -642,6 +655,11 @@ margin-right: 10%;
       width:30%
      
       }
+
+      footer a:hover{
+        color:blue;
+        text-decoration:underline;
+      }
       #products{
         display:none;
         /* border:1px solid red; */
@@ -938,16 +956,16 @@ height:40px;
         <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" alt="logo">
     
         <button id="nav-products">
-         Products ∨
+         Products ▼
         </button>
         <button id="nav-usecase">
-        UseCases ∨
+        UseCases ▼
         </button>
         <button>
-         Features ∨
+         Features ▼
         </button>
         <button>
-         Resources ∨
+         Resources ▼
         </button>
        </section>
         <section id="Sec-right">
@@ -1538,6 +1556,7 @@ height:40px;
         products.style.display="none";
     }else{
         products.style.display="block";
+        body.style.height="100vh";
         // body.style.backgroundColor="blur";
     }
    
@@ -1545,8 +1564,10 @@ height:40px;
   nav_usecase.addEventListener("click",function(){
     if( usecase.style.display=="block"){
         usecase.style.display="none";
+
     }else{
         usecase.style.display="block";
+        body.style.height="100vh";
         // body.style.backgroundColor="blur";
     }
    

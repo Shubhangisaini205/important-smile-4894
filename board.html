@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monday_board</title>
+    <title> monday.com | Monday_board</title>
+    <link rel="icon" href="https://cdn.monday.com/images/logos/monday_logo_icon.png"
+    type="image/x-icon">
     <script src="https://kit.fontawesome.com/fac377af51.js" crossorigin="anonymous"></script>
     <style>
           body{
@@ -152,6 +154,7 @@ border:1px solid black;
             margin-left: 80px;
             border-collapse:collapse;
             display:grid;
+            background-color: whitesmoke;
             
            }
             td{
@@ -170,19 +173,63 @@ border:1px solid black;
             }
             #plus{
                 padding-right:700px;
+
             }
             
             input{
                 font-size: 24px;
-                margin-left:423px
+                margin-left:423px;
+                background-color: whitesmoke;
             }
-            #add{
+            #add,#add2{
              font-size: 23px;
              margin-left: 20px;
              margin-top:10px;
+             border-radius:10px;
+             color:white;
+             border-color: #1937cf;
+             background-color: rgb(44, 66, 137);
             }
             
-
+          .popup{
+            width:55px;
+            padding:20px;
+            border-radius: 20px;
+            background-color: rgb(60, 60, 60);
+            margin-left:60px;
+            margin-top: -50px;
+            visibility: hidden;
+          }
+          
+          .popup button{
+            padding:7px;
+            border-radius: 10px;
+            background-color: rgb(65, 115, 208);
+            color: white;
+          }
+          #section2>h1{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left:80px;
+            color:blue;
+          }
+          #orange{
+            background-color: orange;
+            color:white;
+            
+          
+          }
+          #green{
+            color:white;
+            background-color: rgb(89, 231, 46);
+            text-align: center;
+          }
+          #red{
+            background-color: rgb(228, 64, 64);
+            color:white;
+            text-align: center;
+          }
+        
 
     </style>
 </head>
@@ -227,11 +274,15 @@ border:1px solid black;
                 <div>
                     <i class="fa-solid fa-globe"></i> 
                       </div>
-                <div>
+                <div id="popup" onclick="openPopup()">
                     <img src="https://cdn.monday.com/images/dapulse_default_photo.png" alt="">
                 </div>
+               
                 
             </div>
+            <div class="popup" id="popupBtn">
+                <button id="btnlog">Logout</button>
+              </div>
             
         </div>
          <div id="screen">
@@ -302,8 +353,8 @@ border:1px solid black;
                  Hide</button>
             <button>⋯</button>
             </section>
-            <section>
-                <h1>Group 1</h1>
+            <section id="section2">
+                <h1>⇒ Group 1</h1>
                 <table id="table">
                    <tr>
                     <th id="item">Item</th>
@@ -316,30 +367,65 @@ border:1px solid black;
                    <td>Item 1</td>
                    
                    <td>  <i class="fa-regular fa-circle-user"></i></td>
-                   <td>Working on it</td>
+                   <td id="orange">Working on it</td>
                    <td>dd-mm-yyyy</td>
                    <td></td>
                    </tr>
                    <tr>
                     <td>Item 2</td>
                     <td>  <i class="fa-regular fa-circle-user"></i></td>
-                    <td>Done</td>
+                    <td id="green">Done</td>
                     <td>dd-mm-yyyy</td>
                     <td></td>
                     </tr>
                     <tr>
                         <td>Item 3</td>
                         <td>  <i class="fa-regular fa-circle-user"></i></td>
-                        <td>Stuck</td>
+                        <td id="red">Stuck</td>
                         <td>dd-mm-yyyy</td>
                         <td></td>
                         </tr>
+                    <tbody id="tbody1">
 
+                    </tbody>
                 </table>
+                 
                 <input type="text" placeholder="+ items" id="addItem">
                 <button id="add">
                     Add Items
                 </button>
+               
+                <!-- group2 -->
+            </section>
+            <section id="section2">
+                <h1>⇒ Group 2</h1>
+                <table id="table">
+                   <tr>
+                    <th id="item">Item</th>
+                    <th id="person">Person</th>
+                    <th id=" status">Status</th>
+                    <th>Date</th>
+                    <th id="plus">+</th>
+                   </tr>
+                   <tr>
+                   <td>Item 1</td>
+                   
+                   <td>  <i class="fa-regular fa-circle-user"></i></td>
+                   <td id="orange">Working on it</td>
+                   <td>dd-mm-yyyy</td>
+                   <td></td>
+                   </tr>
+                  
+                    <tbody id="tbody2">
+
+                    </tbody>
+                </table>
+                 
+                <input type="text" placeholder="+ items" id="addItem2">
+                <button id="add2">
+                    Add Items
+                </button>
+               
             </section>
 
 
@@ -349,40 +435,122 @@ border:1px solid black;
     
 </body>
 <script>
+    //group1
     let input = document.getElementById("addItem");
-    let btn = document.getElementById("add");
-    let table = document.getElementById("table")
-    let data = [];
-    let formdata = {
+    let btn1= document.getElementById("add");
+    let table = document.getElementById("tbody1")
+     let data= JSON.parse(localStorage.getItem("tableData"))||[];
+    btn1.addEventListener("click",function(){
+        let userData = {
         item:input.value,
-
-   }
-   data.push(formdata)
-
-
-    btn.addEventListener("click",function(){
+         }
+       data.push(userData);
+       console.log(data)
+       table.innerHTML = null;  
         display(data);
+        localStorage.setItem("tableData",JSON.stringify(data))
+        input.value="";
     })
+    display(data);
 
-    function display(data){
-        data.forEach((element)=>{
+    function display(detail){   
+        table.innerHTML = null;  
+        detail.forEach((element,index)=>{      
          let row1 = document.createElement("tr");
          let col1 = document.createElement("td");
          let col2 = document.createElement("td");
-        //  col2.style.paddingRight="64px"
+         col2.style.paddingRight="64px"
          let col3 = document.createElement("td");
-        //  col3.style.paddingRight="110px"
+         col3.style.paddingRight="103.5px"
+         col3.style.backgroundColor="grey"
          let col4 = document.createElement("td");
+         col4.style.paddingRight="97px"
          let col5 = document.createElement("td");
-         col1.innerText = input.value
-        //  col1.style.paddingRight="20%"
+         col5.style.paddingRight="642px"
+         let col6 = document.createElement("td");
+         col6.innerText="Delete"
+         col6.style.backgroundColor="red"
+         col6.addEventListener("click",function(){
+           detail.splice(index,1)
+           display(detail);
+           localStorage.setItem("tableData",JSON.stringify(detail))
 
-         row1.append(col1,col2,col3,col4,col5);
+         })
+        
+         col1.innerText = element.item;
+         col1.style.width="323px"
+
+         row1.append(col1,col2,col3,col4,col5,col6);
          table.append(row1)
         })
     }
+
+    //group2
+    let input2 = document.getElementById("addItem2");
+    let btn2= document.getElementById("add2");
+    let table2 = document.getElementById("tbody2")
+    let data2 = JSON.parse(localStorage.getItem("tableData2"))||[];
+    btn2.addEventListener("click",function(){
+        let userData = {
+        item:input2.value,
+         }
+       data2.push(userData);
+       console.log(data2)
+       table2.innerHTML = null;  
+        display2(data2);
+        localStorage.setItem("tableData2",JSON.stringify(data))
+        input2.value="";
+    })
+    display2(data2)
+    function display2(detail){   
+        table2.innerHTML = null;  
+        detail.forEach((element,index)=>{      
+         let row1 = document.createElement("tr");
+         let col1 = document.createElement("td");
+         let col2 = document.createElement("td");
+         col2.style.paddingRight="64px"
+         let col3 = document.createElement("td");
+         col3.style.paddingRight="103.5px"
+         col3.style.backgroundColor="grey"
+         let col4 = document.createElement("td");
+         col4.style.paddingRight="97px"
+         let col5 = document.createElement("td");
+         col5.style.paddingRight="642px"
+         let col6 = document.createElement("td");
+         col6.innerText="Delete"
+         col6.style.backgroundColor="red"
+         col6.addEventListener("click",function(){
+           detail.splice(index,1)
+           display2(detail);
+           localStorage.setItem("tableData2",JSON.stringify(detail))
+
+         })
+        
+         col1.innerText = element.item;
+         col1.style.width="323px"
+
+         row1.append(col1,col2,col3,col4,col5,col6);
+         table2.append(row1)
+        })
+    }
+
+
+    //popup
     document.getElementById("home").addEventListener("click",()=>{
         location.href="./home.html"
     })
+    let button= document.getElementById("popupBtn");
+     let popup = document.getElementById("popup");
+     function openPopup(){
+        if(button.style.visibility=="hidden"){
+            button.style.visibility="visible" 
+        } else{
+            button.style.visibility="hidden"
+        }
+     }
+     document.getElementById("btnlog").addEventListener("click",function(){
+        location.href="./signin.html"
+     })
+
 </script>
 </html>
